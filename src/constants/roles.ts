@@ -1,0 +1,9 @@
+export enum ROLES {
+  ADMINISTRATOR = 'ADMINISTRATOR',
+  EXECUTANT = 'EXECUTANT',
+}
+
+export enum ACCESS_LEVEL {
+  DEVELOPER = 40,
+  OWNER = 50,
+}
