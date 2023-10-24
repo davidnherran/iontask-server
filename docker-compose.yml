@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  iontask_pg:
+    image: postgres:15.1
+    container_name: iontask_pg
+    restart: always
+    environment:
+      POSTGRES_DB: iontaskdb
+      POSTGRES_USER: uiontask
+      POSTGRES_PASSWORD: piontask
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 5432:5432
