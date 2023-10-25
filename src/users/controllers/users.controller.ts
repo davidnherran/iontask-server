@@ -22,6 +22,7 @@ import { AdminAccess } from 'src/auth/decorators/admin.decorator';
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
+  @PublicAccess()
   @Post('register')
   public async registerUser(@Body() body: UserDTO) {
     return await this.usersService.createUser(body);
