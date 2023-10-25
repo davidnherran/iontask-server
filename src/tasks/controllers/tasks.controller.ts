@@ -5,12 +5,17 @@ import { AuthGuard } from 'src/auth/guards/auth.guard';
 import { RolesGuard } from 'src/auth/guards/roles.guard';
 import { TasksDTO } from '../dto/tasks.dto';
 import { TasksService } from '../services/tasks.service';
+import { ApiParam, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Tasks')
 @Controller('tasks')
 @UseGuards(AuthGuard, RolesGuard, AccessLevelGuard)
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
  
+  @ApiParam({
+    name: 'projectId'
+  })
   @AccessLevel('DEVELOPER')
   @Post('create/:projectId')
   public async createTask(
