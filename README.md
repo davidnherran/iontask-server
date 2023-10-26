@@ -76,9 +76,8 @@ Para poner en funcionamiento este proyecto, sigue los siguientes pasos:
 
 ```bash
 git clone https://tu-repositorio.git
+```
 
-
-## Installation
 
 ```bash
 $ yarn install
