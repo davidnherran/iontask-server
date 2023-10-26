@@ -75,7 +75,7 @@ Para poner en funcionamiento este proyecto, sigue los siguientes pasos:
 1. Clona el repositorio en tu máquina local.
 
 ```bash
-git clone https://tu-repositorio.git
+git clone [https://github.com/davidnherran/iontask-server.git](https://github.com/davidnherran/iontask-server.git)
 ```
 
 
